@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,500,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/tiny-slider.css">
+    <link rel="stylesheet" href="scss/main.css">
+    <title>Claudia Ziemba / Portfolio</title>
+</head>
+
+<body>
+
+    <div id="main-body">
+        <div class="cursor2"></div>
+        <nav>
+            <div class="logo">
+                <a href="index.html">
+                    <span>Clau</span>
+                    <span>Ziemba</span>
+                </a>
+            </div>
+            <ul class="menu-fixed">
+                <li><a href="#">ABOUT</a></li>
+                <li><a href="mailto:claudia.ziemba@gmail.com">CONTACT</a></li>
+            </ul>
+        </nav>
+        <div class="info-about-me">
+            <p class="gretting">Hello, I'm <span class="orange-strong-color">Claudia</span>, <br>
+                a <span class="orange-strong-color">web developer</span>
+                based in Buenos Aires. </p>
+            <p class="gretting-text">
+                I enjoy creating and developing exciting projects. <br>
+                I <span class="orange-strong-color">love</span> learning new technologies to experiment with and become
+                more <span class="orange-strong-color">flexible.</span> <br>
+                I'm looking for my first working experience in a team,
+                where we can <span class="orange-strong-color">learn</span>, <span
+                    class="orange-strong-color">grow</span>,
+                <span class="orange-strong-color">win</span> and
+                <span class="orange-strong-color">celebrate</span> together.
+            </p>
+            <div class="skills">
+                <p class="skills-title">Skills</p>
+                <div class="skills-list">
+                    <p>
+                        <ion-icon name="chevron-forward-outline"></ion-icon>UI/UX Design
+                    </p>
+                    <p>
+                        <ion-icon name="chevron-forward-outline"></ion-icon>Front-End Dev: HTML - CSS - JS - React
+                    </p>
+                    <p>
+                        <ion-icon name="chevron-forward-outline"></ion-icon>Web Dev/Design: Sass/SCSS - Bootstrap -
+                        Animation libraries
+                        -
+                        Responsive Web Design
+                    </p>
+                    <p>
+                        <ion-icon name="chevron-forward-outline"></ion-icon>Back-End Dev: JS - NodeJs/Express/APIs/Mocha
+                        -
+                        SQL - MongoDB(CRUD) - Python - GIT - NPM
+                    </p>
+                </div>
+            </div>
+            <p class="work-together-contact">Let's work together, <a href="mailto:claudia.ziemba@gmail.com">get in
+                    touch.</a></p>
+            <ul>
+                <li><a href="https://github.com/cziemba1">github</a></li>
+                <li><a href="https://www.linkedin.com/in/claudia-ziemba-b93558a1/">likedin</a></li>
+            </ul>
+        </div>
+
+        <footer>
+            <div class="info-left">
+                <p class="glitch" data-text="web developer">web developer</p>
+            </div>
+            <div class="info-right">
+                <a href="mailto: claudia.ziemba@gmail.com">
+                    <span>Let's work</span>
+                    <span>together</span>
+                </a>
+            </div>
+        </footer>
+
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.1.1/gsap.min.js"></script>
+    <script>
+        //Cursor pointer configuration
+
+        (function () {
+            const cursor2 = document.querySelector(".cursor2");
+
+            const editCursor = e => {
+                const { clientX: x, clientY: y } = e;
+                cursor2.style.left = x + 'px';
+                cursor2.style.top = y + 'px';
+            };
+
+            window.addEventListener('mousemove', editCursor);
+        })();
+
+        //Gsap animation
+
+        const tl = new TimelineMax();
+        tl
+            .from("nav", 1.5, {
+                opacity: 0,
+                y: "-50%"
+            })
+            .from(".info-left", 1.5, {
+                opacity: 0,
+                y: "50%"
+            }, "-=1.5")
+            .from(".info-right", 1.5, {
+                opacity: 0,
+                y: "50%"
+            }, "-=1.5")
+            .from(".info-about-me", 2.5, {
+                opacity: 0,
+            })
+
+    </script>
+</body>
+
+</html>
